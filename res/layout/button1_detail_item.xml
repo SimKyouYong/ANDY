@@ -4,8 +4,9 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
     android:layout_marginTop="10dp"
+    android:id="@+id/rel"
     android:background="#ffffff"
-    android:orientation="vertical" >
+     >
 
     <ImageView
         android:id="@+id/l_img"
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_margin="10dp"
-        android:background="@drawable/ic_launcher" />
+        android:background="@drawable/facerank_p_01" />
 
     <ImageView
         android:id="@+id/r_img"
@@ -21,11 +22,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
-        android:background="@drawable/ic_launcher" />
+        android:background="@drawable/facerank_p_02" />
 
     <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_margin="10dp"
         android:layout_toLeftOf="@+id/r_img"
         android:layout_toRightOf="@+id/l_img" >
@@ -37,15 +39,27 @@
             android:gravity="center"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/round_txt"
+            <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="3 ROUND"
-                android:textColor="#000000"
-                android:textSize="18dp" />
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/facerank_p_03" />
+
+                <TextView
+                    android:id="@+id/round_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 ROUND"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/time_txt"
@@ -62,8 +76,8 @@
             android:id="@+id/second_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/ic_launcher"
+            android:layout_gravity="center"
+            android:background="@drawable/facerank_btn_04"
             android:gravity="center"
             android:visibility="gone" />
     </FrameLayout>
